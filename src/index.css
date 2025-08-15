@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700;900&family=Noto+Sans+JP:wght@400;500;600&family=Zen+Antique&family=Zen+Antique+Soft:wght@400;500;700&family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kurenaido&family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Kaisei+Tokumin:wght@400;500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif {
+  font-family: 'Noto Serif JP', serif;
+}
+
+.font-traditional {
+  font-family: 'Shippori Mincho', 'Zen Antique', 'Noto Serif JP', serif;
+}
+
+.font-antique {
+  font-family: 'Zen Antique', 'Noto Serif JP', serif;
+}
+
+.font-calligraphy {
+  font-family: 'Zen Kurenaido', 'Shippori Mincho B1', 'Kaisei Tokumin', 'Zen Antique', serif;
+}
+
+.font-brush {
+  font-family: 'Kaisei Tokumin', 'Zen Kurenaido', 'Shippori Mincho B1', serif;
+}
+
+/* 最高峰職人サイト用フォント */
+.font-master-craftsman {
+  font-family: 'Zen Antique Soft', 'Kaisei Tokumin', serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* 金色アクセント用クラス */
+.text-gold {
+  color: #D4AF37;
+}
+
+.bg-gold {
+  background-color: #D4AF37;
+}
+
+/* 新カラーパレット */
+.text-deep-indigo {
+  color: #1B2951;
+}
+
+.bg-deep-indigo {
+  background-color: #1B2951;
+}
+
+.text-ink-black {
+  color: #2C2C2C;
+}
+
+.bg-ink-black {
+  background-color: #2C2C2C;
+}
+
+.text-warm-white {
+  color: #FDFCF8;
+}
+
+.bg-warm-white {
+  background-color: #FDFCF8;
+}
+
+/* 重厚な書道風エフェクト */
+.font-living-calligraphy {
+  font-family: 'Zen Antique Soft', 'Kaisei Tokumin', serif;
+  font-weight: 800;
+  /* 筆の質感とかすれ効果 */
+  filter: contrast(1.4) brightness(1.2);
+  /* 文字の自然な歪み */
+  transform-origin: center;
+  /* 墨の濃淡効果 */
+  background: linear-gradient(135deg, 
+    currentColor 0%, 
+    currentColor 20%, 
+    rgba(0,0,0,0.9) 40%, 
+    currentColor 60%, 
+    rgba(0,0,0,0.7) 80%, 
+    currentColor 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* 筆の跳ねエフェクト */
+.brush-stroke {
+  position: relative;
+}
+
+.brush-stroke::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -5%;
+  right: -5%;
+  bottom: -10%;
+  background: radial-gradient(ellipse at center, 
+    rgba(0,0,0,0.1) 0%, 
+    rgba(0,0,0,0.05) 30%, 
+    transparent 50%);
+  z-index: -1;
+  border-radius: 50% 30% 60% 40%;
+  transform: rotate(-2deg);
+}
+
+
+/* 墨の滲みエフェクト */
+.ink-blot {
+  position: relative;
+}
+
+.ink-blot::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 20%;
+  height: 30%;
+  background: radial-gradient(ellipse at center, 
+    rgba(16, 24, 40, 0.15) 0%, 
+    rgba(16, 24, 40, 0.08) 40%, 
+    transparent 70%);
+  border-radius: 60% 40% 30% 70%;
+  transform: rotate(25deg);
+  z-index: -1;
+}
+
+/* 高級感演出エフェクト */
+.luxury-shadow {
+  box-shadow: 
+    0 20px 40px rgba(27, 41, 81, 0.15),
+    0 10px 20px rgba(44, 44, 44, 0.1),
+    0 4px 8px rgba(212, 175, 55, 0.05),
+    inset 0 1px 0 rgba(253, 252, 248, 0.1);
+}
+
+.deep-luxury-shadow {
+  box-shadow: 
+    0 30px 60px rgba(27, 41, 81, 0.25),
+    0 15px 30px rgba(44, 44, 44, 0.15),
+    0 8px 16px rgba(212, 175, 55, 0.1),
+    inset 0 2px 0 rgba(253, 252, 248, 0.15),
+    inset 0 -2px 0 rgba(27, 41, 81, 0.1);
+}
+
+.gold-accent-line {
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #D4AF37 20%, 
+    #F4E68D 50%, 
+    #D4AF37 80%, 
+    transparent 100%);
+  height: 2px;
+}
+
+.washi-texture {
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(253, 252, 248, 0.8) 0%, transparent 20%),
+    radial-gradient(circle at 80% 20%, rgba(253, 252, 248, 0.6) 0%, transparent 15%),
+    radial-gradient(circle at 40% 40%, rgba(253, 252, 248, 0.4) 0%, transparent 10%),
+    linear-gradient(135deg, rgba(253, 252, 248, 0.9) 0%, rgba(253, 252, 248, 0.95) 100%);
+  background-size: 200px 200px, 150px 150px, 100px 100px, 100% 100%;
+  background-position: 0 0, 100px 100px, 50px 150px, 0 0;
+}
+
+.premium-gradient {
+  background: linear-gradient(135deg, 
+    #1B2951 0%, 
+    #243A73 25%, 
+    #2C2C2C 75%, 
+    #1A1A1A 100%);
+}
+
+.gold-text-shadow {
+  text-shadow: 
+    1px 1px 0 #B8941F,
+    2px 2px 0 #9C7D1A,
+    3px 3px 0 #806615,
+    4px 4px 8px rgba(212, 175, 55, 0.4),
+    0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.craftsman-elegance {
+  background: linear-gradient(135deg, 
+    rgba(253, 252, 248, 0.95) 0%, 
+    rgba(253, 252, 248, 0.9) 50%, 
+    rgba(245, 244, 240, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
