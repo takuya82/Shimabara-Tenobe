@@ -41,7 +41,7 @@ const Products: React.FC = () => {
         <SectionHeader title="商品ラインナップ" subtitle="OUR PRODUCTS" />
 
         <div className="grid md:grid-cols-3 gap-16 mt-24">
-          {products.map((product, index) => (
+          {products.map((product) => (
             <div key={product.id} style={{
               backgroundColor: '#f5f5dc',
               border: '1px solid #d4af37',
