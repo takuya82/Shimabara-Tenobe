@@ -11,7 +11,7 @@ import './App.css';
 
 const App: React.FC = () => {
   return (
-    <div className="App" style={{
+    <div style={{
       fontFamily: "'Noto Serif JP', 'Times New Roman', serif",
       backgroundColor: '#1a1a1a',
       color: '#f5f5dc',
